@@ -119,6 +119,14 @@ function populateBlogWithProjects() {
     // Project data with dates and metadata
     const projects = [
         {
+            title: "Pitch AI Bot",
+            date: "August 2025",
+            category: "Machine Learning",
+            description: "An intelligent card game AI powered by neural networks and reinforcement learning. Features a complete 4-player Pitch game with three AI opponents using trained TensorFlow.js models for strategic decision making.",
+            link: "projects/pitch-ai-bot.html",
+            icon: "fas fa-gamepad"
+        },
+        {
             title: "Text Classification Model",
             date: "March 2025",
             category: "Machine Learning",

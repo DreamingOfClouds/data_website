@@ -186,13 +186,17 @@ body {
 .hero-avatar {
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: white;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* About Section */
@@ -210,22 +214,23 @@ body {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.7;
+    text-align: center;
 }
 
 .education h3 {
     font-size: 1.5rem;
     margin: 2rem 0 1rem;
     color: #2563eb;
+    text-align: center;
 }
 
 .education-item {
@@ -274,10 +279,19 @@ body {
     font-weight: 500;
 }
 
+.skills h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: #2563eb;
+    text-align: center;
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .skill-category {
@@ -291,6 +305,7 @@ body {
     color: #2563eb;
     margin-bottom: 1rem;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .skill-category ul {
@@ -301,6 +316,7 @@ body {
     padding: 8px 0;
     border-bottom: 1px solid #eee;
     color: #555;
+    text-align: center;
 }
 
 .skill-category li:last-child {
@@ -351,6 +367,8 @@ body {
     margin-bottom: 1rem;
     color: #333;
 }
+
+
 
 .project-content p {
     color: #666;
