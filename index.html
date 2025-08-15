@@ -3,100 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pitch AI Demo</title>
+    <title>Mason Ellerbroek - Data Analyst & Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎯 Pitch AI Demo</h1>
-            <p>Play against our trained neural network in the classic card game Pitch</p>
-        </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Mason Ellerbroek</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-        <div class="game-container">
-            <div class="game-info">
-                <div class="score-board">
-                    <div class="team team0">
-                        <h3>Team 0 (You)</h3>
-                        <div class="score">0</div>
-                    </div>
-                    <div class="team team1">
-                        <h3>Team 1 (AI)</h3>
-                        <div class="score">0</div>
-                    </div>
-                </div>
-                <div class="game-status">
-                    <div id="current-phase">Waiting to start...</div>
-                    <div id="current-player"></div>
-                    <div id="trump-suit"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm Mason Ellerbroek</h1>
+                <p class="hero-subtitle">Data Analyst & Software Engineer</p>
+                <p class="hero-description">
+                    I transform complex data into actionable insights and build intelligent solutions 
+                    that drive business value. Passionate about machine learning, data visualization, 
+                    and creating user-centric applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <div class="hero-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="game-board">
-                <div class="opponents">
-                    <div class="opponent" id="opponent-0">
-                        <div class="player-label">Player 1</div>
-                        <div class="cards-count">6 cards</div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a data engineer with a passion for turning complex data
+                        into meaningful insights. My expertise spans machine learning, advanced modeling,
+                        data visualization, and statistical analysis through the usage of Python and R.
+                    </p>
+                    <p>
+                        With experience in both technical and analytical roles and a strong belief in communication, I bridge the gap between
+                        raw data and business strategy. I enjoy working on projects that challenge me to
+                        think creatively and solve real-world problems.
+                    </p>
+                    
+                    <div class="education">
+                        <h3>Education & Honors</h3>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h4>Bachelor of Science in Data Science and German</h4>
+                                <span class="education-date">May 2025</span>
+                            </div>
+                            <p class="education-school">Valparaiso University</p>
+                            <div class="education-details">
+                                <div class="education-honors">
+                                    <span class="honor-badge">Summa Cum Laude</span>
+                                    <span class="honor-badge">Phi Beta Kappa</span>
+                                    <span class="honor-badge">Christ College Scholar</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="opponent" id="opponent-1">
-                        <div class="player-label">Player 2</div>
-                        <div class="cards-count">6 cards</div>
-                    </div>
-                    <div class="opponent" id="opponent-2">
-                        <div class="player-label">Player 3</div>
-                        <div class="cards-count">6 cards</div>
+                    
+                    <div class="skills">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Programming</h4>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>SQL</li>
+                                    <li>R</li>
+                                    <li>BASH</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Data Science</h4>
+                                <ul>
+                                    <li>Machine Learning</li>
+                                    <li>Statistical Analysis</li>
+                                    <li>Data Visualization</li>
+                                    <li>Pandas/NumPy</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Platforms</h4>
+                                <ul>
+                                    <li>Jupyter Notebooks</li>
+                                    <li>Git/GitHub</li>
+                                    <li>Tableau</li>
+                                    <li>Excel/Google Sheets</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="center-area">
-                    <div class="trick-area">
-                        <div class="trick-cards" id="trick-cards"></div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
                     </div>
-                    <div class="bidding-area" id="bidding-area" style="display: none;">
-                        <h3>Bidding Phase</h3>
-                        <div class="bid-options">
-                            <button class="bid-btn" data-bid="0">Pass</button>
-                            <button class="bid-btn" data-bid="2">Bid 2</button>
-                            <button class="bid-btn" data-bid="3">Bid 3</button>
-                            <button class="bid-btn" data-bid="4">Bid 4</button>
+                    <div class="project-content">
+                        <h3>Pitch AI Bot</h3>
+                        <p>
+                            An intelligent card game AI powered by neural networks and reinforcement learning. 
+                            Features a complete 4-player Pitch game with three AI opponents using trained 
+                            TensorFlow.js models for strategic decision making.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TensorFlow.js</span>
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Reinforcement Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/pitch-ai-bot.html" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="player-hand">
-                    <h3>Your Hand</h3>
-                    <div class="cards" id="player-cards"></div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Text Classification Model</h3>
+                        <p>
+                            Developed a machine learning model using Bag-of-Words and neural networks 
+                            to classify text data and predict review counts. Implemented with PyTorch 
+                            and scikit-learn.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/text-classification-model.html" class="project-link">View Project</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="controls">
-                <button id="new-game-btn" class="primary-btn">New Game</button>
-                <button id="auto-play-btn" class="secondary-btn">Auto Play</button>
-                <button id="reset-btn" class="secondary-btn">Reset</button>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Significant Others: A Statistical Look at Fetishization in Fanfiction</h3>
+                        <p>
+                            Comprehensive academic research project examining patterns of fetishization in fanfiction 
+                            communities through statistical analysis. Applied quantitative methods to understand 
+                            character representation and relationship dynamics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Statistical Analysis</span>
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Academic Research</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/significant-others-fanfiction.html" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Annotated Final Paper Model</h3>
+                        <p>
+                            Advanced academic research project incorporating statistical modeling and data analysis 
+                            to explore complex social phenomena. Demonstrated research methodologies and analytical techniques.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Statistical Modeling</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Academic Research</span>
+                            <span class="tag">R</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/annotated-final-paper-model.html" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="model-info">
-            <h3>AI Model Status</h3>
-            <div class="model-status">
-                <div class="model">
-                    <span class="model-name">Bidding Model:</span>
-                    <span class="status" id="bidding-status">Loading...</span>
-                </div>
-                <div class="model">
-                    <span class="model-name">Playing Model:</span>
-                    <span class="status" id="playing-status">Loading...</span>
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Projects</h2>
+            <div class="blog-grid">
+                <!-- Blog content will be populated dynamically with newest projects -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always interested in new opportunities and collaborations. 
+                        Whether you have a project in mind or just want to chat about data science, 
+                        feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Ellerbroek.Mason@gmail.com">Ellerbroek.Mason@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (319) 464-0714</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Iowa, USA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/masonellerbroek/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
-    <script>
-        // Test TensorFlow.js loading
-        console.log('TensorFlow.js loaded, version:', tf.version);
-        console.log('TensorFlow.js backend:', tf.getBackend());
-    </script>
-    <script src="pitch-ai.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mason Ellerbroek. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

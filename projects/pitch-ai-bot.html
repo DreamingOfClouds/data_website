@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch AI Bot - Mason Ellerbroek</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .project-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .project-section {
+            margin-bottom: 60px;
+        }
+        
+        .project-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .project-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .project-info h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .game-embed {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .game-embed h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        
+        .back-button i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Mason Ellerbroek</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <h1>🎯 Pitch AI Bot</h1>
+            <p>An intelligent card game AI powered by neural networks and reinforcement learning</p>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <a href="../index.html#projects" class="back-button">
+            <i class="fas fa-arrow-left"></i>Back to Projects
+        </a>
+
+        <div class="project-section">
+            <h2>Project Overview</h2>
+            <div class="project-grid">
+                <div class="project-info">
+                    <h3>What is Pitch AI?</h3>
+                    <p>
+                        Pitch AI is a sophisticated web application that allows users to play the classic card game Pitch 
+                        against AI opponents powered by neural networks trained with reinforcement learning. The AI demonstrates 
+                        advanced strategic thinking in both bidding and playing phases of the game.
+                    </p>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Complete 4-player Pitch game implementation</li>
+                        <li>Three AI opponents using trained neural networks</li>
+                        <li>Interactive UI with card visualization</li>
+                        <li>Real-time gameplay with visual feedback</li>
+                        <li>Auto-play mode for AI vs AI games</li>
+                        <li>Responsive design for all devices</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">TensorFlow.js</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Neural Networks</span>
+                        <span class="tech-tag">Reinforcement Learning</span>
+                    </div>
+                </div>
+                
+                <div class="game-embed">
+                    <h3>🎮 Play the Game</h3>
+                    <div class="game-container">
+                        <div class="game-info">
+                            <div class="score-board">
+                                <div class="team team0">
+                                    <h3>Team 0 (You)</h3>
+                                    <div class="score">0</div>
+                                </div>
+                                <div class="team team1">
+                                    <h3>Team 1 (AI)</h3>
+                                    <div class="score">0</div>
+                                </div>
+                            </div>
+                            <div class="game-status">
+                                <div id="current-phase">Waiting to start...</div>
+                                <div id="current-player"></div>
+                                <div id="trump-suit"></div>
+                            </div>
+                        </div>
+
+                        <div class="game-board">
+                            <div class="opponents">
+                                <div class="opponent" id="opponent-0">
+                                    <div class="player-label">Player 1</div>
+                                    <div class="cards-count">6 cards</div>
+                                </div>
+                                <div class="opponent" id="opponent-1">
+                                    <div class="player-label">Player 2</div>
+                                    <div class="cards-count">6 cards</div>
+                                </div>
+                                <div class="opponent" id="opponent-2">
+                                    <div class="player-label">Player 3</div>
+                                    <div class="cards-count">6 cards</div>
+                                </div>
+                            </div>
+
+                            <div class="center-area">
+                                <div class="trick-area">
+                                    <div class="trick-cards" id="trick-cards"></div>
+                                </div>
+                                <div class="bidding-area" id="bidding-area" style="display: none;">
+                                    <h3>Bidding Phase</h3>
+                                    <div class="bid-options">
+                                        <button class="bid-btn" data-bid="0">Pass</button>
+                                        <button class="bid-btn" data-bid="2">Bid 2</button>
+                                        <button class="bid-btn" data-bid="3">Bid 3</button>
+                                        <button class="bid-btn" data-bid="4">Bid 4</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="player-hand">
+                                <h3>Your Hand</h3>
+                                <div class="cards" id="player-cards"></div>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <button id="new-game-btn" class="primary-btn">New Game</button>
+                            <button id="auto-play-btn" class="secondary-btn">Auto Play</button>
+                            <button id="reset-btn" class="secondary-btn">Reset</button>
+                        </div>
+                    </div>
+
+                    <div class="model-info">
+                        <h3>AI Model Status</h3>
+                        <div class="model-status">
+                            <div class="model">
+                                <span class="model-name">Bidding Model:</span>
+                                <span class="status" id="bidding-status">Loading...</span>
+                            </div>
+                            <div class="model">
+                                <span class="model-name">Playing Model:</span>
+                                <span class="status" id="playing-status">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Technical Implementation</h2>
+            <div class="project-info">
+                <h3>Neural Network Architecture</h3>
+                <p>
+                    The AI system uses two specialized neural networks:
+                </p>
+                <ul>
+                    <li><strong>Bidding Model:</strong> 56 inputs → 128 hidden neurons → 4 outputs (Pass, Bid 2, Bid 3, Bid 4)</li>
+                    <li><strong>Playing Model:</strong> 184 inputs → 256 hidden neurons → 52 outputs (one for each card)</li>
+                </ul>
+                
+                <h3>State Representation</h3>
+                <p>
+                    The AI processes complex game states including:
+                </p>
+                <ul>
+                    <li>Current hand (52-card encoding)</li>
+                    <li>Trump suit information</li>
+                    <li>Current trick state</li>
+                    <li>Game history and bidding results</li>
+                    <li>Player position and turn information</li>
+                </ul>
+                
+                <h3>Decision Making</h3>
+                <p>
+                    The AI employs policy gradient methods with actor-critic architecture, 
+                    legal move masking for valid actions, and stochastic sampling for exploration. 
+                    This creates a challenging opponent that adapts its strategy based on game context.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Game Rules</h2>
+            <div class="project-info">
+                <h3>How to Play Pitch</h3>
+                <p>
+                    Pitch is a trick-taking card game where 4 players compete in teams of 2:
+                </p>
+                <ul>
+                    <li>Each player receives 6 cards</li>
+                    <li>Players bid on how many points they can win (Pass, 2, 3, or 4)</li>
+                    <li>Trump suit is determined by the first card played</li>
+                    <li>Points are awarded for winning tricks and special cards</li>
+                    <li>Teams must work together to achieve their bid</li>
+                </ul>
+                
+                <h3>Controls</h3>
+                <ul>
+                    <li><strong>New Game:</strong> Start a new game</li>
+                    <li><strong>Auto Play:</strong> Watch AI vs AI games</li>
+                    <li><strong>Reset:</strong> Reset scores and return to waiting state</li>
+                    <li><strong>Bidding:</strong> Click bid buttons during bidding phase</li>
+                    <li><strong>Playing:</strong> Click cards in your hand to play them</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Development Process</h2>
+            <div class="project-info">
+                <h3>Training & Development</h3>
+                <p>
+                    The AI models were developed using reinforcement learning techniques:
+                </p>
+                <ul>
+                    <li>Models trained on thousands of simulated games</li>
+                    <li>Policy gradient optimization for strategic decision making</li>
+                    <li>Extensive testing and validation against rule-based opponents</li>
+                    <li>Web deployment using TensorFlow.js for browser compatibility</li>
+                </ul>
+                
+                <h3>Future Enhancements</h3>
+                <p>
+                    Planned improvements include:
+                </p>
+                <ul>
+                    <li>Web-based model training interface</li>
+                    <li>Online multiplayer support</li>
+                    <li>Tournament mode for AI competition</li>
+                    <li>Game replay and analysis tools</li>
+                    <li>Additional game variants and rules</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mason Ellerbroek. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../index.html#home">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#blog">Blog</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+    <script src="../pitch-ai.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
