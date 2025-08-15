@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.game-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.score-board {
+    display: flex;
+    gap: 30px;
+}
+
+.team {
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.team.team0 {
+    border-left: 4px solid #28a745;
+}
+
+.team.team1 {
+    border-left: 4px solid #dc3545;
+}
+
+.team h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.game-status {
+    text-align: center;
+}
+
+.game-status > div {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#current-phase {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.game-board {
+    position: relative;
+    min-height: 500px;
+    margin-bottom: 30px;
+}
+
+.opponents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.opponent {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.player-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.cards-count {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.center-area {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.trick-area {
+    min-height: 120px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px dashed #dee2e6;
+}
+
+.trick-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.trick-slot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.team-label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.bidding-area {
+    background: #e3f2fd;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #2196f3;
+}
+
+.bidding-area h3 {
+    margin-bottom: 15px;
+    color: #1976d2;
+}
+
+.bid-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bid-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #2196f3;
+    color: white;
+}
+
+.bid-btn:hover {
+    background: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.bid-btn[data-bid="0"] {
+    background: #6c757d;
+}
+
+.bid-btn[data-bid="0"]:hover {
+    background: #5a6268;
+}
+
+.player-hand {
+    text-align: center;
+}
+
+.player-hand h3 {
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card.selected {
+    transform: translateY(-10px);
+    border-color: #007bff;
+    box-shadow: 0 8px 20px rgba(0,123,255,0.3);
+}
+
+.card.played {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.card.opponent {
+    background: #e9ecef;
+    border-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.card.opponent:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card.winning-card {
+    box-shadow: 0 0 0 3px #ffd700, 0 0 0 6px #ffed4e, 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    border: 2px solid #ffd700;
+    animation: winningGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes winningGlow {
+    from {
+        box-shadow: 0 0 0 3px #ffd700, 0 0 0 6px #ffed4e, 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    to {
+        box-shadow: 0 0 0 4px #ffd700, 0 0 0 8px #ffed4e, 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.card.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: grayscale(50%);
+}
+
+.transition-message {
+    text-align: center;
+    padding: 20px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    color: #856404;
+    font-weight: 500;
+    margin: 20px 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.card-rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-suit {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.card.suit-C .card-suit { color: #000; }
+.card.suit-D .card-suit { color: #dc3545; }
+.card.suit-H .card-suit { color: #dc3545; }
+.card.suit-S .card-suit { color: #000; }
+
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: #28a745;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.secondary-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.model-info {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.model-info h3 {
+    margin-bottom: 15px;
+    color: #495057;
+    text-align: center;
+}
+
+.model-status {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.model-name {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status.loading {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.ready {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+#model-error-message {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    color: #856404;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+#model-error-message strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+#model-error-message code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    border: 1px solid #dee2e6;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .game-container {
+        padding: 20px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .score-board {
+        gap: 15px;
+    }
+    
+    .opponents {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cards {
+        gap: 10px;
+    }
+    
+    .card {
+        width: 60px;
+        height: 90px;
+    }
+    
+    .bid-options {
+        gap: 10px;
+    }
+    
+    .bid-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Round Results Overlay Styles */
+.round-results-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.round-results {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    animation: slideUp 0.3s ease-out;
+}
+
+.round-results h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #495057;
+    font-size: 1.5rem;
+}
+
+.results-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.result-item .label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.result-item .value {
+    font-weight: 500;
+    color: #007bff;
+    text-align: right;
+}
+
+.result-item.winner .value {
+    color: #27ae60;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

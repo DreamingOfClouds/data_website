@@ -1,0 +1,160 @@
+{
+  "format": "layers-model",
+  "generatedBy": "keras v3.10.0",
+  "convertedBy": "TensorFlow.js Converter v4.22.0",
+  "modelTopology": {
+    "keras_version": "3.10.0",
+    "model_config": {
+      "class_name": "Sequential",
+      "config": {
+        "name": "playing_model",
+        "layers": [
+          {
+            "class_name": "InputLayer",
+            "config": {
+              "batch_input_shape": [null, 224],
+              "dtype": "float32",
+              "sparse": false,
+              "ragged": false,
+              "name": "input_layer_1"
+            },
+            "name": "input_layer_1"
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "dense_3",
+              "trainable": true,
+              "units": 256,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {"seed": null}
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              }
+            },
+            "name": "dense_3"
+          },
+          {
+            "class_name": "LeakyReLU",
+            "config": {
+              "name": "leaky_re_lu_3",
+              "trainable": true,
+              "negative_slope": 0.01
+            },
+            "name": "leaky_re_lu_3"
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "dense_4",
+              "trainable": true,
+              "units": 256,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {"seed": null}
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              }
+            },
+            "name": "dense_4"
+          },
+          {
+            "class_name": "LeakyReLU",
+            "config": {
+              "name": "leaky_re_lu_4",
+              "trainable": true,
+              "negative_slope": 0.01
+            },
+            "name": "leaky_re_lu_4"
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "dense_5",
+              "trainable": true,
+              "units": 128,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {"seed": null}
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              }
+            },
+            "name": "dense_5"
+          },
+          {
+            "class_name": "LeakyReLU",
+            "config": {
+              "name": "leaky_re_lu_5",
+              "trainable": true,
+              "negative_slope": 0.01
+            },
+            "name": "leaky_re_lu_5"
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "policy",
+              "trainable": true,
+              "units": 52,
+              "activation": "softmax",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {"seed": null}
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              }
+            },
+            "name": "policy"
+          }
+        ]
+      }
+    },
+    "build_config": {"input_shape": null},
+    "compile_config": {
+      "optimizer": {
+        "class_name": "Adam",
+        "config": {
+          "name": "adam",
+          "learning_rate": 0.001,
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "epsilon": 1e-07,
+          "amsgrad": false
+        }
+      },
+      "loss": "categorical_crossentropy"
+    }
+  },
+  "weightsManifest": [
+    {
+      "paths": ["group1-shard1of1.bin"],
+      "weights": [
+        {"name": "dense_3/kernel", "shape": [224, 256], "dtype": "float32"},
+        {"name": "dense_3/bias", "shape": [256], "dtype": "float32"},
+        {"name": "dense_4/kernel", "shape": [256, 256], "dtype": "float32"},
+        {"name": "dense_4/bias", "shape": [256], "dtype": "float32"},
+        {"name": "dense_5/kernel", "shape": [256, 128], "dtype": "float32"},
+        {"name": "dense_5/bias", "shape": [128], "dtype": "float32"},
+        {"name": "policy/kernel", "shape": [128, 52], "dtype": "float32"},
+        {"name": "policy/bias", "shape": [52], "dtype": "float32"}
+      ]
+    }
+  ]
+}

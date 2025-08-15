@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch AI Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Pitch AI Demo</h1>
+            <p>Play against our trained neural network in the classic card game Pitch</p>
+        </header>
+
+        <div class="game-container">
+            <div class="game-info">
+                <div class="score-board">
+                    <div class="team team0">
+                        <h3>Team 0 (You)</h3>
+                        <div class="score">0</div>
+                    </div>
+                    <div class="team team1">
+                        <h3>Team 1 (AI)</h3>
+                        <div class="score">0</div>
+                    </div>
+                </div>
+                <div class="game-status">
+                    <div id="current-phase">Waiting to start...</div>
+                    <div id="current-player"></div>
+                    <div id="trump-suit"></div>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div class="opponents">
+                    <div class="opponent" id="opponent-0">
+                        <div class="player-label">Player 1</div>
+                        <div class="cards-count">6 cards</div>
+                    </div>
+                    <div class="opponent" id="opponent-1">
+                        <div class="player-label">Player 2</div>
+                        <div class="cards-count">6 cards</div>
+                    </div>
+                    <div class="opponent" id="opponent-2">
+                        <div class="player-label">Player 3</div>
+                        <div class="cards-count">6 cards</div>
+                    </div>
+                </div>
+
+                <div class="center-area">
+                    <div class="trick-area">
+                        <div class="trick-cards" id="trick-cards"></div>
+                    </div>
+                    <div class="bidding-area" id="bidding-area" style="display: none;">
+                        <h3>Bidding Phase</h3>
+                        <div class="bid-options">
+                            <button class="bid-btn" data-bid="0">Pass</button>
+                            <button class="bid-btn" data-bid="2">Bid 2</button>
+                            <button class="bid-btn" data-bid="3">Bid 3</button>
+                            <button class="bid-btn" data-bid="4">Bid 4</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-hand">
+                    <h3>Your Hand</h3>
+                    <div class="cards" id="player-cards"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="new-game-btn" class="primary-btn">New Game</button>
+                <button id="auto-play-btn" class="secondary-btn">Auto Play</button>
+                <button id="reset-btn" class="secondary-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="model-info">
+            <h3>AI Model Status</h3>
+            <div class="model-status">
+                <div class="model">
+                    <span class="model-name">Bidding Model:</span>
+                    <span class="status" id="bidding-status">Loading...</span>
+                </div>
+                <div class="model">
+                    <span class="model-name">Playing Model:</span>
+                    <span class="status" id="playing-status">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+    <script>
+        // Test TensorFlow.js loading
+        console.log('TensorFlow.js loaded, version:', tf.version);
+        console.log('TensorFlow.js backend:', tf.getBackend());
+    </script>
+    <script src="pitch-ai.js"></script>
+</body>
+</html>
